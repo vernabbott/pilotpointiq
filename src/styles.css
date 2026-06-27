@@ -104,6 +104,28 @@ select {
   color: #0f5b63;
 }
 
+.tenant-picker {
+  display: grid;
+  gap: 6px;
+  min-width: 220px;
+}
+
+.tenant-picker span {
+  color: #5f6d78;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tenant-picker select {
+  background: #ffffff;
+  border: 1px solid #cbd6dc;
+  border-radius: 8px;
+  color: #243640;
+  min-height: 38px;
+  padding: 0 10px;
+}
+
 .page-shell {
   margin: 0 auto;
   max-width: 1240px;
@@ -282,6 +304,13 @@ tbody tr:hover {
   display: grid;
   gap: 20px;
   grid-template-columns: minmax(0, 1fr) 390px;
+}
+
+.appetite-layout {
+  align-items: start;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1fr);
 }
 
 .details-panel,
@@ -510,6 +539,51 @@ tbody tr:hover {
   width: 100%;
 }
 
+.compact-action {
+  max-width: 240px;
+}
+
+.workflow-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 20px;
+}
+
+.workflow-grid article {
+  background: #ffffff;
+  border: 1px solid #dce3e8;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.workflow-grid span {
+  align-items: center;
+  background: #e8f3f1;
+  border-radius: 999px;
+  color: #0f5b63;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 850;
+  height: 28px;
+  justify-content: center;
+  margin-bottom: 12px;
+  width: 28px;
+}
+
+.workflow-grid h3 {
+  color: #132f35;
+  font-size: 1rem;
+  margin: 0 0 7px;
+}
+
+.workflow-grid p {
+  color: #5f6d78;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
 .ai-results {
   display: grid;
   gap: 12px;
@@ -559,10 +633,18 @@ tbody tr:hover {
   margin-top: 8px;
 }
 
+.carrier-card .citation-line {
+  color: #40505a;
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
 @media (max-width: 920px) {
   .app-header,
   .page-title-row,
-  .insight-layout {
+  .insight-layout,
+  .appetite-layout,
+  .workflow-grid {
     align-items: stretch;
     grid-template-columns: 1fr;
   }
@@ -574,8 +656,11 @@ tbody tr:hover {
   }
 
   .nav-tabs,
-  .nav-tab {
+  .nav-tab,
+  .tenant-picker,
+  .compact-action {
     width: 100%;
+    max-width: none;
   }
 
   .nav-tab {
