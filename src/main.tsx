@@ -520,7 +520,7 @@ function AppetiteSearch({
 
 function App() {
   const [tenantId, setTenantId] = useState<string>(organizations[0].id);
-  const [activePage, setActivePage] = useState<PageId>("policy");
+  const [activePage, setActivePage] = useState<PageId>("accounts");
   const [selectedPolicyNo, setSelectedPolicyNo] = useState("");
   const [aiState, setAiState] = useState<AiState>("idle");
   const [matches, setMatches] = useState<AppetiteMatch[]>([]);
